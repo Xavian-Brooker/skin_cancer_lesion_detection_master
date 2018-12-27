@@ -9,13 +9,10 @@ This project explains how to classify skin cancer images into benign, intermedia
 ## Data Collection ##
 To train the classifier, the images were taken from [ISIS Archive](https://www.isic-archive.com/#!/topWithHeader/onlyHeaderTop/gallery). By setting the diagnostic attribute to **benign**, the filtered images were downloaded, then again by changing the attribute to **intermediate('s)** and finally to **malignant**. As the main dataset is humoungous, I chose to try this algortihm with just 500 images per class, you can choose to increase the dataset to further increase the accuracy. The image data was stored in this way -
 
-`\train
-  
-  \benign
-  
-  \intermediate
-  
-  \malignant`
+`\train`
+  `\benign`
+  `\intermediate` 
+  `\malignant`
   
 ## Algorithm ##
 To achieve better accuracy, Google's Inception was retrained by following the [tensorflow-for-poets](https://codelabs.developers.google.com/codelabs/tensorflow-for-poets/) & by using the script written in the `commands_to_retrain.txt` file. There are other options such as MobileNets model which is actually mentioned in the `tensorflow-for-poets` guide for lower latency & inference etc. 
