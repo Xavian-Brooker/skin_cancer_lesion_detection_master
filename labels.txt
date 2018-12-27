@@ -1,0 +1,3 @@
+benign
+intermediate
+malignant
