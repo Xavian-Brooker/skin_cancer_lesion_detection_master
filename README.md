@@ -7,7 +7,8 @@ When there is an abnormality in the skin cells than a tumor is formed. When this
 This project explains how to classify skin cancer images into benign, intermediate or malignant so that if the cancer is detected early than its almost curable. *Note - You need not to rely on this algorithm as it might be wrong, so if it shows a positive result, kindly contact a nearby dermatologist for confirmation.*
 
 ## Data Collection ##
-To train the classifier, the images were taken from [ISIS Archive](https://www.isic-archive.com/#!/topWithHeader/onlyHeaderTop/gallery). By setting the diagnostic attribute to **benign**, the filtered images were downloaded, then again by changing the attribute to **intermediate('s)** and finally to **malignant**. As the main dataset is humoungous, I chose to try this algortihm with just 500 images per class, you can choose to increase the dataset to further increase the accuracy. The image data was stored in this way -
+To train the classifier, the images were taken from [ISIS Archive](https://www.isic-archive.com/#!/topWithHeader/onlyHeaderTop/gallery). By setting the diagnostic attribute to **benign**, the filtered images were downloaded, then again by changing the attribute to **intermediate('s)** and finally to **malignant**. As the main dataset is humoungous, I chose to try this algortihm with just 500 images per class, you can choose to increase the dataset to further increase the accuracy. The trimmed (my) version of the dataset is availible [here](). 
+The image data was stored in this way -
 
 `\train`
   `\benign`
@@ -20,7 +21,7 @@ You might also have to change the image_dir, bottlenecks_dir & output_graph, out
 For training, epochs were set to default (4000 epochs) and so the flag `--how_many_training_steps` was not mentioned in the bash script. You can tweak the `--learning_rate` for variance in the performance.  
 
 ## What Next? ##
-After the model has been retrained it outputs a `retrained_inception1.pb` file & a `retrained_graph.txt` file. You can either create a tensorflow program that imports this `savedModel` file and uses it for inference, or you can deploy the trained file into mobile devices by following the [tensorflow-for-poets-2](https://codelabs.developers.google.com/codelabs/tensorflow-for-poets/#8)guide.
+After the model has been retrained it outputs a `retrained_inception1.pb` file & a `retrained_graph.txt` file. I've uploaded my `retrained_model.pb` in my [dropbox](https://www.dropbox.com/s/isnqbya1c4tqlq5/retrained_inception1.pb?dl=0) for the same. You can either create a tensorflow program that imports this `savedModel` file and uses it for inference, or you can deploy the trained file into mobile devices by following the [tensorflow-for-poets-2](https://codelabs.developers.google.com/codelabs/tensorflow-for-poets/#8)guide.
 
 ## Contribution to the society ##
 As every developer tries to use ML in the field of Medicine to fight terminating diseases such as Cancer is contributing something to the society. Cheers!
